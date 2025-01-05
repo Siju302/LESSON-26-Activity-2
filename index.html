@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Inheritance</title>
+    </head>
+
+    <body>
+        <h2>Simple Inheritance.</h2>
+    
+        <p id="details"></p>
+        <script>
+            // Parent object
+            var animal = {
+                type: "animal",
+                legs: 4
+            };
+
+            // Child object inherits fron animal
+            var cat = Object.create(animal);
+            cat.name = "Sally";
+            cat.sound = "meow";
+
+            // Display details
+            var details = "The " + cat.type + " has " + cat.legs
+            + " legs." + " It is called " + cat.name + " and it says " +
+            cat.sound + ".";
+            document.getElementById("details").innerHTML = details;
+        </script>
+    </body>
+</html>
